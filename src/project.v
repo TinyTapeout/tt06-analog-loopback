@@ -15,11 +15,10 @@ module tt_um_analog_loopback (
     input  wire       clk,
     input  wire       rst_n
 );
-/*
+
     assign uo_out = VGND;
     assign uio_out = VGND;
     assign uio_oe = VGND;
-    */
     
     assign ua[1] = ua[0];
     assign ua[3] = ua[2];
