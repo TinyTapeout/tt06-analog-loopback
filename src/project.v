@@ -17,6 +17,7 @@ module tt_um_analog_loopback (
 );
 
     wire tie_low;
+    // must have at least once cell in the verilog or netgen has a problem
     sky130_fd_sc_hd__conb_1 sky130_fd_sc_hd__conb_1 (
         .VGND(VGND),
         .VNB (VGND),
@@ -25,12 +26,7 @@ module tt_um_analog_loopback (
         .LO  (tie_low)
     );
 
-    /*
-    assign uo_out  = tie_low;
-    assign uio_out = tie_low;
-    assign uio_oe  = tie_low;
-    */
-
+    // all ports have to be assigned individually or netgen has a problem
     assign uo_out[0] = tie_low;
     assign uo_out[1] = tie_low;
     assign uo_out[2] = tie_low;
@@ -58,6 +54,7 @@ module tt_um_analog_loopback (
     assign uio_oe[6] = tie_low;
     assign uio_oe[7] = tie_low;
     
+    // the loopback
     assign ua[1] = ua[0];
     assign ua[3] = ua[2];
     assign ua[5] = ua[4];
