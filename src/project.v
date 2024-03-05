@@ -16,9 +16,18 @@ module tt_um_analog_loopback (
     input  wire       rst_n
 );
 
-    assign uo_out = VGND;
-    assign uio_out = VGND;
-    assign uio_oe = VGND;
+    wire tie_low;
+    sky130_fd_sc_hd__conb_1 sky130_fd_sc_hd__conb_1 (
+        .VGND(VGND),
+        .VNB (VGND),
+        .VPB (VPWR),
+        .VPWR(VPWR),
+        .LO  (tie_low)
+    );
+
+    assign uo_out  = tie_low;
+    assign uio_out = tie_low;
+    assign uio_oe  = tie_low;
     
     assign ua[1] = ua[0];
     assign ua[3] = ua[2];
