@@ -25,9 +25,38 @@ module tt_um_analog_loopback (
         .LO  (tie_low)
     );
 
+    /*
     assign uo_out  = tie_low;
     assign uio_out = tie_low;
     assign uio_oe  = tie_low;
+    */
+
+    assign uo_out[0] = tie_low;
+    assign uo_out[1] = tie_low;
+    assign uo_out[2] = tie_low;
+    assign uo_out[3] = tie_low;
+    assign uo_out[4] = tie_low;
+    assign uo_out[5] = tie_low;
+    assign uo_out[6] = tie_low;
+    assign uo_out[7] = tie_low;
+
+    assign uio_out[0] = tie_low;
+    assign uio_out[1] = tie_low;
+    assign uio_out[2] = tie_low;
+    assign uio_out[3] = tie_low;
+    assign uio_out[4] = tie_low;
+    assign uio_out[5] = tie_low;
+    assign uio_out[6] = tie_low;
+    assign uio_out[7] = tie_low;
+
+    assign uio_oe[0] = tie_low;
+    assign uio_oe[1] = tie_low;
+    assign uio_oe[2] = tie_low;
+    assign uio_oe[3] = tie_low;
+    assign uio_oe[4] = tie_low;
+    assign uio_oe[5] = tie_low;
+    assign uio_oe[6] = tie_low;
+    assign uio_oe[7] = tie_low;
     
     assign ua[1] = ua[0];
     assign ua[3] = ua[2];
