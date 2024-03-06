@@ -30,7 +30,7 @@ jobs:
           pdk_version: 78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
           pdk_root: /home/runner/pdk
 
-	  - name: Magic
+      - name: Magic
         shell: bash
         run: |
             sudo apt-get install -y m4 python3 libx11-dev tcl-dev tk-dev libcairo2-dev mesa-common-dev libglu1-mesa-dev
