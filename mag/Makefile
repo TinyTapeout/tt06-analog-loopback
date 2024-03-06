@@ -43,8 +43,10 @@ lvs: lvs.report
     fi; \
 	if [ $$match -eq 1 ] && [ $$propOk -eq 1 ]; then \
         echo "LVS OK"; \
+	    exit 0; \
     else \
         echo "LVS FAIL: match $$match properties $$propOk"; \
+	    exit 1; \
     fi
 
 update_gds:
