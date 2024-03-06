@@ -49,7 +49,7 @@ jobs:
            make -j4 
            sudo make install
 
-     - name: LVS
+     - name: Run LVS
        shell: bash
        run: |
            cd mag
