@@ -1,6 +1,8 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/lvs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# Tiny Tapeout Analog Loopback
+
+This analog loopback design is a debugging/"control" design allows us to characterize the resistance and step response of the chip after manufacturing. This characterization is useful for calibrating the rest of the analog designs on this chip.
 
 - [Read the documentation for project](docs/info.md)
 
